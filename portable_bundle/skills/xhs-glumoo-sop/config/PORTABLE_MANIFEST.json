@@ -1,0 +1,38 @@
+{
+  "name": "xhs-glumoo-sop-portable",
+  "version": "2026-03-16",
+  "goal": "Migrate the full Glumoo Xiaohongshu SOP to another OpenClaw machine with no secrets bundled.",
+  "contains": [
+    "skills/xhs-glumoo-sop/SKILL.md",
+    "skills/xhs-glumoo-sop/PET_SCENE_PERSONA_SOP.md",
+    "skills/xhs-glumoo-sop/config/themes.json",
+    "skills/xhs-glumoo-sop/config/README_PORTABLE.md",
+    "skills/xhs-glumoo-sop/config/.env.portable.example",
+    "skills/xhs-glumoo-sop/config/PORTABLE_MANIFEST.json",
+    "skills/xhs-glumoo-sop/scripts/run_xhs_sop.py",
+    "worker_bundle/glumoo_factory_v4.6.1_FESTIVAL_FINAL.py",
+    "worker_bundle/xhs_auto_post.sh",
+    "ref_images/sku1.png",
+    "ref_images/sku1小包装.png",
+    "ref_images/sku2.jpg",
+    "ref_images/sku2小包装.png",
+    "ref_images/sku3.jpg",
+    "ref_images/sku3小包装.png"
+  ],
+  "not_included": [
+    "Gemini API keys",
+    "Xiaohongshu login session",
+    "mcporter.json secrets",
+    "daily generated outputs"
+  ],
+  "minimum_to_run_review_only": [
+    "Configure GOOGLE_API_KEY or GEMINI_API_KEY",
+    "Set XHS_WORKSPACE_WORKER, XHS_DAILY_OUT_BASE, XHS_REF_DIR",
+    "Put 6 SKU reference images into XHS_REF_DIR"
+  ],
+  "extra_needed_for_publish": [
+    "Install mcporter",
+    "Prepare xiaohongshu MCP config",
+    "Login with QR on target machine"
+  ]
+}
